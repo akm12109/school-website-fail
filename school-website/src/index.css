@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add a glowing effect on hover for the footer links */
+.footer-link {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  }
+  
+  .footer-link:hover {
+    color: #ff9900;
+    text-shadow: 0 0 8px rgba(255, 153, 0, 0.8), 0 0 16px rgba(255, 153, 0, 0.6);
+  }
+  
+  /* Icon Rotation on Hover */
+  .social-icon {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  }
+  
+  .social-icon:hover {
+    transform: rotate(360deg);
+    filter: brightness(1.3);
+  }
+  
+  /* Scale effect and shadow effect for quick links and info cards */
+  .bg-white {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .bg-white:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Add a pulse effect to the icons */
+  .social-icon:hover .text-4xl {
+    animation: pulse 1s infinite;
+  }
+  
+  /* Pulse keyframe animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Add a smooth background gradient animation */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .bg-gradient-to-r {
+    animation: gradientAnimation 5s ease infinite;
+    background-size: 200% 200%;
+  }
+  
